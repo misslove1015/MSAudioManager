@@ -261,9 +261,9 @@
         lame_set_num_channels(lame, 2); // 声道：2
         lame_set_in_samplerate(lame, 44100); // 采样率：44100
         lame_set_VBR(lame, vbr_default);
-        lame_set_brate(lame, 128);
+        lame_set_brate(lame, 128); // 比特率：128K
         lame_set_mode(lame, 1);
-        lame_set_quality(lame, 2);
+        lame_set_quality(lame, 2); // 音频质量
         lame_init_params(lame);
         
         do {
@@ -541,7 +541,7 @@
     return nil;
 }
 
-// 寻找音频的开头
+// 寻找音频从何时开始有声音
 + (void)findBeginWithAudioPath:(NSString *)audioPath
                      startTime:(CGFloat)startTime
                          voice:(CGFloat)voice

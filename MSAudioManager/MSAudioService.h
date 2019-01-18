@@ -111,7 +111,7 @@
 
 
 /**
- 寻找音频的开头
+ 寻找音频从何时开始有声音
 
  @param audioPath 音频地址
  @param startTime 从何时开始寻找

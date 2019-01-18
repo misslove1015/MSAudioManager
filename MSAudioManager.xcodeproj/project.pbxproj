@@ -14,7 +14,6 @@
 		4CED025721F1CBCE00073F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CED025521F1CBCE00073F52 /* LaunchScreen.storyboard */; };
 		4CED025A21F1CBCE00073F52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED025921F1CBCE00073F52 /* main.m */; };
 		4CED026221F1CBDE00073F52 /* MSAudioService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED026121F1CBDE00073F52 /* MSAudioService.m */; };
-		4CED026821F1CC2F00073F52 /* LameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED026421F1CC2F00073F52 /* LameTool.m */; };
 		4CED026921F1CC2F00073F52 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED026521F1CC2F00073F52 /* libmp3lame.a */; };
 /* End PBXBuildFile section */
 
@@ -31,9 +30,7 @@
 		4CED025921F1CBCE00073F52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CED026021F1CBDE00073F52 /* MSAudioService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSAudioService.h; sourceTree = "<group>"; };
 		4CED026121F1CBDE00073F52 /* MSAudioService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAudioService.m; sourceTree = "<group>"; };
-		4CED026421F1CC2F00073F52 /* LameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LameTool.m; sourceTree = "<group>"; };
 		4CED026521F1CC2F00073F52 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
-		4CED026621F1CC2F00073F52 /* LameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LameTool.h; sourceTree = "<group>"; };
 		4CED026721F1CC2F00073F52 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +84,6 @@
 		4CED026321F1CC2F00073F52 /* Lame */ = {
 			isa = PBXGroup;
 			children = (
-				4CED026421F1CC2F00073F52 /* LameTool.m */,
-				4CED026621F1CC2F00073F52 /* LameTool.h */,
 				4CED026521F1CC2F00073F52 /* libmp3lame.a */,
 				4CED026721F1CC2F00073F52 /* lame.h */,
 			);
@@ -165,7 +160,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CED026821F1CC2F00073F52 /* LameTool.m in Sources */,
 				4CED024F21F1CBCD00073F52 /* ViewController.m in Sources */,
 				4CED025A21F1CBCE00073F52 /* main.m in Sources */,
 				4CED026221F1CBDE00073F52 /* MSAudioService.m in Sources */,
