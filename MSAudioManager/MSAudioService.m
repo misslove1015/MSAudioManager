@@ -583,4 +583,48 @@
     }];
 }
 
+// 调整PCM文件音量
++ (void)adjustPCMVolumeWithAuidoPath:(NSString *)audioPath
+                          outputPath:(NSString *)outputPath
+                                rate:(CGFloat)rate
+                            complete:(void (^)(NSString *))complete {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        pcm_volume_control([audioPath UTF8String], [outputPath UTF8String], rate);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (complete) {
+                complete(outputPath);
+            }
+        });
+    });
+}
+
+void pcm_volume_control(const char *path, const char *out_path, float rate) {
+    short s16In = 0;
+    short s16Out = 0;
+    long long size = 0;
+    
+    FILE *fp = fopen(path, "rb+");
+    FILE *fp_vol = fopen(out_path, "wb+");
+    
+    while(!feof(fp)){
+        size = fread(&s16In, 2, 1, fp);
+        if(size > 0) {
+            int tmp;
+            tmp = (s16In)*rate;
+            if(tmp > 32767) {
+                tmp = 32767;
+            }
+            if(tmp < -32768) {
+                tmp = -32768;
+            }
+            s16Out = tmp;
+            fwrite(&s16Out, 2, 1, fp_vol);
+        }
+    }
+    
+    fclose(fp);
+    fclose(fp_vol);
+}
+
+
 @end

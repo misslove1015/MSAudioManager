@@ -123,5 +123,19 @@
                          voice:(CGFloat)voice
                       complete:(void(^)(CGFloat time))complete;
 
+
+/**
+ 调整PCM文件的音量
+ 
+ @param audioPath 音频地址
+ @param outputPath 输出地址
+ @param rate 倍数，应该为大于0的float
+ @param complete 完成回调
+ */
++ (void)adjustPCMVolumeWithAuidoPath:(NSString *)audioPath
+                          outputPath:(NSString *)outputPath
+                                rate:(CGFloat)rate
+                            complete:(void(^)(NSString *path))complete;
+
 @end
 
